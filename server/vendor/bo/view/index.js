@@ -14,7 +14,7 @@ const renderIndex = (context, entity, tab, data) => {
       <!-- Header -->
       <div id="headerDiv">
       <header>
-		<nav class="navbar navbar-expand-lg navbar-light">
+		<nav class="navbar navbar-expand-lg">
 
 	
     <a class="navbar-brand" href="/ppitv3/public/home">
@@ -79,6 +79,7 @@ const renderIndex = (context, entity, tab, data) => {
 		</nav>
 	</header></div>
     
+  <div class="container">
     <div class="card">
       <div class="card-header" id="menuDiv"><div id="main_menu">
       <ul class="nav nav-pills nav-justified flex-column flex-sm-row">
@@ -131,6 +132,7 @@ const renderIndex = (context, entity, tab, data) => {
         <input type="hidden" id="groupRoute" value="bo/group/${entity}" />
     
       </div>
+    </div>
     </div>
     
     <div class="modal fade" id="listDetailModalForm" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="listDetailModalLabel" aria-hidden="true">

@@ -5,12 +5,10 @@ const renderTableHead = (context, properties, major, dir) => {
     for (let propertyId of Object.keys(properties)) {
         const property = properties[propertyId]
         head.push(`<th>
-            <a type="button" class="btn btn-sm listSortAnchor ${(major == propertyId) ? `btn-secondary active ${(dir == 'ASC') ? "sortAnchorUp" : "sortAnchorDown"}` : "" }" role="button" id="listSortAnchor-${propertyId}">
             
-                <span>${context.localize(property.labels)}</span>
+              <span>${context.localize(property.labels)}</span>
 
-                ${(major == propertyId) ? `<i class="fas fa-caret-${(dir == "ASC") ? "up" : "down"}"></i>` : ""}
-            </a>
+              ${(major == propertyId) ? `<i class="fas fa-caret-${(dir == "ASC") ? "up" : "down"}"></i>` : ""}
         </th>`)
     }
     return head.join("\n")
@@ -204,7 +202,7 @@ const renderList = (context, entity, tab, rows, orderParam, limit) => {
                 <form class="was-validated" id="ListForm">
 
                     <table class="table table-sm table-hover">
-                        <thead class="table-info">
+                        <thead>
                             <th colspan="2">
                                 <a type="button" class="btn btn-sm sort_anchor" role="button">
                                     <b id="listCount">${rows.length}</b>
